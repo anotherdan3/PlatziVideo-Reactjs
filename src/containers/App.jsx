@@ -1,0 +1,51 @@
+import React from 'react';
+//Components
+import Header from '../components/Header';
+import Search from '../components/Search';
+import Carousel from '../components/Carousel';
+import CarouselItem from '../components/CarouselItem';
+import Categories from '../components/Categories';
+import Footer from '../components/Footer';
+//Styles
+import '../assets/styles/App.scss';
+
+const App = () => (
+  <div className="App">
+    <Header />
+    <Search />
+    <Categories title="Mi lista">
+      <Carousel>
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+      </Carousel>
+    </Categories>
+    <Categories title="Trending">
+      <Carousel>
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+      </Carousel>
+    </Categories>
+    <Categories title="New">
+      <Carousel>
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+        <CarouselItem />
+      </Carousel>
+    </Categories>
+    <Footer />
+  </div>
+);
+
+export default App;
