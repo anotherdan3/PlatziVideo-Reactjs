@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginRequest } from '../actions/index';
 import '../assets/styles/components/LoginForm.scss';
+import Header from '../components/Header';
 import googleIcon from '../assets/images/google-icon.png';
 import twitterIcon from '../assets/images/twitter-icon.png';
 
@@ -26,6 +27,7 @@ const Login = (props) => {
 
   return (
     <div>
+      <Header isLogin />
       <section className="login">
         <section className="login__container">
           <h2>Inicia sesión</h2>
@@ -71,7 +73,7 @@ const Login = (props) => {
             </div>
           </section>
           <p className="login__container--register">
-            No tienes ninguna cuenta
+            No tienes ninguna cuenta{' '}
             <Link to="/register">Regístrate</Link>
           </p>
         </section>

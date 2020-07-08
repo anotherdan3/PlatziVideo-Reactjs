@@ -6,6 +6,8 @@ import Search from '../components/Search';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import Categories from '../components/Categories';
+import Header from '../components/Header';
+
 //Styles
 import '../assets/styles/Home.scss';
 
@@ -18,6 +20,7 @@ const Home = ({ myList, trends, originals }) => {
 
   return (
     <div className="App">
+      <Header />
       <Search />
       {myList.length > 0 && (
         <Categories title="My List">
