@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { setFavorite, deleteFavorite } from '../actions/index';
 import '../assets/styles/components/CarouselItem.scss';
 import plusIcon from '../assets/images/plus-icon.png';
@@ -30,11 +31,13 @@ const CarouselItem = (props) => {
       />
       <div className="carousel-item__details">
         <div>
-          <img
-            className="carousel-item__details--img"
-            src={playIcon}
-            alt="Play Icon"
-          />
+          <Link to={`/player/${id}`}>
+            <img
+              className="carousel-item__details--img"
+              src={playIcon}
+              alt="Play Icon"
+            />
+          </Link>
 
           {isList ? (
             <img
